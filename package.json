@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "fullpage.js": "^4.0.22"
+    "sass": "^1.70.0"
   }
 }
