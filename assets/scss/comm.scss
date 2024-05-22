@@ -1,0 +1,99 @@
+@import "variables", "mixins", "fonts", "reset";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
+* {
+  cursor: none;
+}
+a {
+  cursor: none;
+}
+body {
+  overflow: hidden;
+  font-family: $font-family;
+}
+.section {
+  height: 100vh;
+  background: #000;
+}
+.inner {
+  max-width: 1280px;
+  max-height: 700px;
+  margin: 0 auto;
+  min-height: 100vh;
+  overflow: hidden;
+}
+.line {
+  width: 100vw;
+  height: 1px;
+  background: rgb(239, 219, 180, 0.25);
+  position: absolute;
+}
+.txt-normal {
+  // color: lightcyan;
+  color: $black;
+}
+.sect3,
+.sect4 {
+  .inner {
+    // position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .title {
+    position: absolute;
+    top: -72px;
+    right: 0;
+    font-size: 125px;
+    color: $primary;
+  }
+  .line-1 {
+    top: 160px;
+    left: 0;
+  }
+  .line-2 {
+    top: 722px;
+    right: -468px;
+    transform: rotate(90deg);
+    z-index: 0;
+  }
+}
+.fp-table {
+  display: block;
+}
+.fp-overflow {
+  overflow: hidden;
+}
+#fp-nav {
+  a {
+    &.active {
+      span {
+        &:nth-child(2) {
+          width: 20px;
+          height: 20px;
+          background: url(../img/restart_10866455.png) no-repeat 50% 50% / cover;
+          margin-top: -8px;
+          margin-left: -10px;
+          animation: spin 1.5s linear infinite;
+        }
+        @keyframes spin {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+}
+.highlight {
+  color: yellow;
+}
+
+@import "main";
